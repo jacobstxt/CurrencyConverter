@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Currency converter</title>
+    <link href="Css/Style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="Js/LoadPartials.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <script>loadPartial("/Partials/NavBar.html")</script>
+        <div class="ContainerDown">
+            <div class="ContainerCard">
+                <h2 class="textStyleForCard text-xl font-semibold text-gray-800">Конвертер валют</h2>
+                <p class="textStyleForCard text-gray-600">Джерело:по середньому банківському курсу</p>
+
+                <div class="ContainerCurrencies">
+                    <div class="ContainerCurrency" tabindex="0">
+                        <h1 class="text-left text-xl font-semibold">У мене є</h1>
+                        <script>loadPartial("/Partials/Form.html")</script>
+                    </div>
+
+
+                    <div class="ContainerCurrency" tabindex="0">
+                        <h1 class="text-left text-xl font-semibold">Я отримаю </h1>
+                        <script>loadPartial("/Partials/GetForm.html")</script>
+                    </div>
+                </div>
+
+                <button type="button" onclick="showResult()" class="py-2.5 px-4 bg-green-500 text-white rounded-lg">
+                    Результат
+                </button>
+
+
+            </div>
+
+
+            <script>loadPartial("/Partials/Section.html")</script>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
