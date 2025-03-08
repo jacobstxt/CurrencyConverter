@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .container {
   width: 1280px;
   margin: auto;
@@ -92,6 +91,10 @@
     flex-direction: column;
     align-items: center;
   }
+  .containerRow {
+    flex-direction: column;
+    align-items: center;
+  }
   .ContainerCurrency {
     width: 100%;
     max-width: 270px;
@@ -104,6 +107,15 @@
   }
   button {
     margin-top: 15px;
+  }
+}
+@media (max-width: 1208px) {
+  .containerRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    display: none;
   }
 }
 .text {
@@ -126,24 +138,24 @@ button {
   padding: 12px 30px;
   font-size: 16px;
   font-weight: 600;
-  background: linear-gradient(135deg, #4caf50, #45a049); /* Градієнт */
+  background: linear-gradient(135deg, #4caf50, #45a049);
   color: white;
   border: none;
-  border-radius: 50px; /* Округлені кути */
+  border-radius: 50px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Тінь для 3D ефекту */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background: linear-gradient(135deg, #45a049, #4caf50); /* Інший напрямок градієнта */
-  transform: translateY(-3px); /* Легке підняття при наведенні */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Збільшена тінь */
+  background: linear-gradient(135deg, #45a049, #4caf50);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-  transform: translateY(1px); /* Легке натискання */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Знову повертається до початкової тіні */
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .textStyleForCard {
