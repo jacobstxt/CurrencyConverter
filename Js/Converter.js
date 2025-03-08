@@ -4,7 +4,7 @@
             const { data, status } = resp;
             console.log("Resp status", status);
 
-            // Отримуємо введені дані
+
             const amount = parseFloat(document.getElementById("amount").value);
             const fromCurrency = document.getElementById("currency").value;
             const toCurrency = document.getElementById("ToCurrency").value;
@@ -25,7 +25,7 @@
                 if (item.ccy === toCurrency) toRate = parseFloat(item.buy);
             });
 
-            // Конвертація
+          
             let result;
             if (fromCurrency === "UAH") {
                 result = amount / toRate;
@@ -35,7 +35,8 @@
                 result = (amount * fromRate) / toRate;
             }
 
-            resultField.innerText = `≈ ${result.toFixed(2)} ${toCurrency}`;
+            console.log("Результат:", result);
+            resultField.value = `${result.toFixed(2)} ${toCurrency}`;
         })
         .catch(error => console.error("Помилка завантаження курсу:", error));
 };
