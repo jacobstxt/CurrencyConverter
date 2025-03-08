@@ -6,11 +6,11 @@
     <link href="Css/Style.css" rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="Js/LoadPartials.js"></script>
+    <script src="Js/axios.min.js"></script>
 </head>
 
 
 <body>
-
     <div class="container">
         <script>loadPartial("/Partials/NavBar.html")</script>
         <div class="ContainerDown">
@@ -21,29 +21,31 @@
                 <div class="ContainerCurrencies">
                     <div class="ContainerCurrency" tabindex="0">
                         <h1 class="text-left text-xl font-semibold">У мене є</h1>
-                        <script>loadPartial("/Partials/Form.html")</script>
+                        <script>loadPartial("/Partials/InputForm.html")</script>
                     </div>
 
 
-                    <div class="ContainerCurrency" tabindex="0">
+                    <div class="ContainerCurrency" tabindex="0" id="GetMoney">
                         <h1 class="text-left text-xl font-semibold">Я отримаю </h1>
                         <script>loadPartial("/Partials/GetForm.html")</script>
                     </div>
                 </div>
 
-                <button type="button" onclick="showResult()" class="py-2.5 px-4 bg-green-500 text-white rounded-lg">
+                <button type="button" onclick="Convert('/CurrentCurrency.json')" class="py-2.5 px-4 bg-green-500 text-white rounded-lg">
                     Результат
                 </button>
 
 
             </div>
 
-
             <script>loadPartial("/Partials/Section.html")</script>
-
 
         </div>
     </div>
+
+
+    <script src="/Js/Converter.js"></script>
+
 
 </body>
 </html>

@@ -116,7 +116,7 @@ button {
 }
 
 .textStyleForCard {
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .StyleForUl {
@@ -129,6 +129,12 @@ section {
   background-color: #f1f5f9;
   border-radius: 10px;
   margin-top: 30px;
+}
+
+.InputTitle:focus {
+  border-color: green;
+  outline: none;
+  border-width: 2px;
 }
 
 /*# sourceMappingURL=Style.css.map */
