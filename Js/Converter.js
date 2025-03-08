@@ -36,7 +36,7 @@
             }
 
             console.log("Результат:", result);
-            resultField.value = `${result.toFixed(2)} ${toCurrency}`;
+            resultField.value = `${result.toFixed(2)}`;
         })
         .catch(error => console.error("Помилка завантаження курсу:", error));
 };
